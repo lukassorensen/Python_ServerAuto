@@ -1,0 +1,10 @@
+# image?
+FROM python:3.14-slim
+
+# set work directory
+WORKDIR /FirstDocker
+
+COPY . .
+
+# hvad kode skal køres?
+CMD ["python", "DockerKode.py"]
