@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Byg Docker image
-        run: docker build -t "DockerKode" ./Docker
+        run: docker build -t "DockerGit" ./Docker
       
       - name: Test image
-        run: docker run "DockerKode"
+        run: docker run "DockerGit"
