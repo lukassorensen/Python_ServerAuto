@@ -12,3 +12,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Byg Docker image
         run: docker build -t "DockerKode" ./Docker
+      
+      - name: Test image
+        run: docker run "DockerKode"
