@@ -1,13 +1,14 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Byg docker image
+
+on:
+  push:
+    branches:
+      -main
+
 jobs:
-  check-bats-version:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+      - uses: actions/checkout@v4
+      - name: Byg Docker image
+        run: docker build -t "DockerKode" ./Docker
