@@ -15,5 +15,5 @@ spec:
       containers:
       - name: hello-python
         image: ghcr.io/lukassorensen/dockerkode:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
 
