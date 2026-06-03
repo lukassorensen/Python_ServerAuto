@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dockerkode
+  name: dockerkodev2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dockerkode
+      app: dockerkodev2
   template:
     metadata:
       labels:
-        app: dockerkode
+        app: dockerkodev2
     spec:
       containers:
       - name: hello-python
