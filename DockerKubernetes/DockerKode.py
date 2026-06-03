@@ -2,16 +2,25 @@ import random
 import os
 import time
 
-# f clear_screen():
+# def clear_screen():
     # .system('cls' if os.name == 'nt' else 'clear')
 
-# ear_screen()
+# clear_screen()
 
-print("The computer will generate a number between 0 and 100, it will the try to guess it")
+def PrintNumber():
+    print("the number is:", random_number)
+
+"""
+Program that generates a random number and then tries to guess it.
+it will keep track of how many guesses it takes to guess the number. 
+The program will also give feedback on whether the guess is too high or too low.
+"""
+
+print("The computer will generate a number between 0 and 10, it will the try to guess it")
 print("-------")
 random_number = random.randint(0, 10)
 guesses = 0
-print("The number is:", random_number)
+PrintNumber()
 print("-------")
 
 time.sleep(2)
