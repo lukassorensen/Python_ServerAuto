@@ -7,47 +7,30 @@ def clear_screen():
 
 clear_screen()
 
-print("I will pick a random number between 0 and a number you choose, and you have to guess it!")
-user_input = input("Type a number:")
-
-clear_screen()
-
-if user_input.isdigit():
-    user_input = int(user_input)
-
-    if user_input <= 0:
-        print("It has to be a number larger than 0!")
-        print("Exiting program...")
-        time.sleep(2)
-        quit()
-else:
-    print("Type a number next time!")
-    print("Exiting program...")
-    time.sleep(2)
-    quit()
-
-random_number = random.randint(0, user_input)
+print("The computer will generate a number between 0 and 100, it will the try to guess it")
+print("-------")
+random_number = random.randint(0, 10)
 guesses = 0
+print("The number is:", random_number)
+print("-------")
+
+time.sleep(2)
+print("I will now guess the number")
 
 while True:
     guesses += 1
-    user_guess = input("Try and guess the number: ")
-    if user_guess.isdigit():
-        user_guess = int(user_guess)
-    else:
-        print("Type a number!")
-        continue
-
+    time.sleep(1)
+    user_guess = random.randint(0,10)
+    print("My guess is:", user_guess)
+    
     if user_guess == random_number:
-        print("Congratulations! You guessed the number!")
+        print("Horray! I guessed the number!")
         break
     elif user_guess > random_number:
-        clear_screen()
-        print("You guessed above the number, try again")
+        print("I guessed too high this time")
         continue
     else:
-        clear_screen()
-        print("You guessed below the number, try again")
+        print("I guessed too low this time")
         continue
 
-print("It took you", guesses, "tries to guess the number.")
+print("It only took me", guesses, "tries to guess the number.")
